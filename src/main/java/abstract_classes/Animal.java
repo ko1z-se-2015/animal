@@ -2,6 +2,7 @@ package abstract_classes;
 
 
 import interfaces.Moveable;
+import interfaces.Walkable;
 
 abstract public class Animal implements Moveable {
 
@@ -15,4 +16,9 @@ abstract public class Animal implements Moveable {
     public int getComfortableSpace() {
        return size;
     }
+
+    public abstract boolean Walk();
+
+    public abstract boolean Fly();
+    public abstract boolean Swim();
 }

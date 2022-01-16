@@ -38,6 +38,16 @@ public class Cage extends Habitat {
     }
     @Override
     public void add(Animal animal) {
-        super.add(animal);
+        if(animal.getComfortableSpace() <= size){
+            if(animal.Fly()==false && animal.Swim() == true && animal.Walk()==false){
+                super.add(animal);
+                System.out.println("Animal was added");
+            }else{
+                System.out.println("The environment is not suitable for the animal");
+            }
+        }else{
+            System.out.println("The environment is not suitable for the animal");
+        }
+
     }
 }
